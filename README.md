@@ -27,5 +27,9 @@ docker-compose up -d
 ```
 helm repo add ygqygq2 https://ygqygq2.github.io/charts/
 helm repo update
-helm install f-n ygqygq2/fastdfs-nginx
+helm pull ygqygq2/fastdfs-nginx
+tar zxvf fastdfs-nginx-2.0.0.tgz 
+cd fastdfs-nginx/
+helm dependency update
+helm install fastdfs-nginx .
 ```
